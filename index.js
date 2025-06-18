@@ -77,7 +77,7 @@ app.set('view engine', 'ejs');
 var cookieParser = require('cookie-parser');
 var expressSession = require('express-session');
 app.use(cookieParser()); 
-app.use(expressSession({secret: 'D%$*&^lk32', resave: false,saveUninitialized: true}));  
+app.use(expressSession({secret: process.env.SESSION_SECRET, resave: false,saveUninitialized: true}));  
 
  
 app.use(function (req, res, next) {
@@ -87,19 +87,19 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json());  
 app.use(express.urlencoded({limit: '100mb',extended: true })); 
  
-global.fromEmail = 'helpdesk@digitrell.com'; //  
-global.companyEmail='info@digitrell.com';
-global.companyPhone=8423090070;
+global.fromEmail = process.env.HELPDESK_EMAIL; //  
+global.companyEmail=process.env.COMPANY_EMAIL;
+global.companyPhone=process.env.COMPANY_PHONE;
 global.blogingEmail='bloginpoints@gmail.com';
 
 const nodemailer    = require("nodemailer"); 
 global.smtpTransport = nodemailer.createTransport({
-    host: 'mail.digitrell.com',
+    host: process.env.SMTP_HOST,
     port: 465,
     secure: true,
     auth: {
-        user: 'helpdesk@digitrell.com',
-        pass: '*upBr5.99Ksj'
+        user: process.env.SMTP_EMAIL,
+        pass: process.env.SMTP_PASSWORD
     }
 }); 
 

@@ -1,0 +1,191 @@
+<body>
+    <div class="preloader-activate preloader-active open_tm_preloader">
+        <div class="preloader-area-wrap">
+            <div class="spinner d-flex justify-content-center align-items-center h-100">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--====================  header area ====================-->
+    <div class="header-area">
+
+        <!-- Header Top Wrap Start -->
+        <div class="header-top-wrap border-bottom" style="display: none;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p class="text-center top-message"><a href="#">Now Hiring:</a> Are you a driven and motivated 1st Line IT Support Engineer?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header Top Wrap End -->
+
+        <div class="header-bottom-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="header position-relative">
+                            <!-- brand logo -->
+                            <div class="header__logo top-logo">
+                                <a href="<%=nodeSiteUrl%>/home">
+                                    <img src="<%=nodeSiteUrl%>/website/images/logo/digitrell-logo-new.png" class="img-fluid" alt="">
+                                </a>
+                            </div>
+
+                            <div class="header-right flexible-image-slider-wrap">
+
+                                <div class="header-right-inner" id="hidden-icon-wrapper">
+                                    <!-- Header Search Form -->
+                                    <div class="header-search-form d-md-none d-block">
+                                        <form action="<%=nodeSiteUrl%>/search" class="search-form-top">
+                                            <input name="search_string" class="search-field" type="text" placeholder="Search…">
+                                            <button class="search-submit">
+                                                <i class="search-btn-icon fa fa-search"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+
+                                    <!-- Header Top Info -->
+                                    <div class="swiper-container header-top-info-slider-werap top-info-slider__container">
+                                        <div class="swiper-wrapper header-top-info-inner default-color">
+                                            <div class="swiper-slide">
+                                                <div class="info-item">
+                                                    <div class="info-icon">
+                                                        <span class="fa fa-phone"></span>
+                                                    </div>
+                                                    <div class="info-content">
+                                                        <h6 class="info-title"><%=companyPhone%></h6>
+                                                        <div class="info-sub-title"><%=companyEmail%></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="info-item">
+                                                    <div class="info-icon">
+                                                        <span class="fa fa-map-marker-alt"></span>
+                                                    </div>
+                                                    <div class="info-content">
+                                                        <h6 class="info-title">gaurbagh colony</h6>
+                                                        <div class="info-sub-title">Kursi Road Lucknow</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="info-item">
+                                                    <div class="info-icon">
+                                                        <span class="fa fa-clock"></span>
+                                                    </div>
+                                                    <div class="info-content">
+                                                        <h6 class="info-title">8:00AM - 6:00PM</h6>
+                                                        <div class="info-sub-title">Monday to Saturday</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="info-item">
+                                                    <div class="info-icon">
+                                                        <span class="fa fa-comment-alt-lines"></span>
+                                                    </div>
+                                                    <div class="info-content">
+                                                        <h6 class="info-title">Online 24/7</h6>
+                                                        <div class="info-sub-title">+122 123 4567</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Header Social Networks -->
+                                    <% if(socialData){%>
+                                        <div class="header-social-networks style-icons">
+                                            <div class="inner">
+                                                <% for(var i=0;i<socialData.length;i++){%>
+
+                                                    <a class=" social-link hint--black hint--bottom-left" aria-label="<%=socialData[i].label%>" href="<%=socialData[i].url%>" data-hover="<%=socialData[i].label%>" target="_blank">
+                                                        <i class="social-icon <%=socialData[i].icon%>"></i>
+                                                    </a>
+                                                <%}%>
+                                            </div>
+                                        </div>
+                                    <%}%>
+
+                                </div>
+                                <!-- mobile menu -->
+                                <div class="mobile-navigation-icon d-block d-xl-none" id="mobile-menu-trigger">
+                                    <i></i>
+                                </div>
+                                <!-- hidden icons menu -->
+                                <div class="hidden-icons-menu d-block d-md-none" id="hidden-icon-trigger">
+                                    <a href="javascript:void(0)">
+                                        <i class="far fa-ellipsis-h-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bottom-wrap bg-theme-default d-md-block d-none header-sticky">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="header-bottom-inner">
+                                <div class="header-bottom-left-wrap">
+                                    <!-- navigation menu -->
+                                    <div class="header__navigation d-none d-xl-block">
+                                        <nav class="navigation-menu navigation-menu--text_white">
+                                            
+                                            <ul>
+                                                <% for(const menu of headerMenu){ %>
+                                                    <li class="<%=(menu.children!==undefined)?'has-children has-children--multilevel-submenu':''%>">
+                                                        <a href="<%=menu.url%>"><span><%=menu.title%></span></a>
+                                                        <% if(menu.children!==undefined){%>                                                           
+                                                                <ul class="submenu">
+                                                                    <% for(const submenu of menu.children){%>
+                                                                    <li class="<%=(submenu.children!==undefined)?'has-children':''%>">
+                                                                        <a href="<%=submenu.url%>"><%=submenu.title%></a>
+                                                                        <% if(submenu.children!==undefined){%>
+                                                                            <ul class="submenu">
+                                                                            <%for(const childmost of submenu.children){%>
+                                                                                
+                                                                                <li><a href="<%=childmost.url%>"><%=childmost.title%></a></li>                                
+                                                                                
+                                                                            <%}%>
+                                                                            </ul>
+                                                                        <%}%>
+                                                                    </li> 
+                                                                    <%}  %>                          
+                                                                </ul>
+                                                        <%}%>
+                                                    </li>
+                                                <%}%>
+                                                
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+<!---
+                                <div class="header-search-form ">
+                                    <form action="<%=nodeSiteUrl%>/search" class="search-form-top style-03 ">
+                                        <input class="search-field" type="text" placeholder="Search…">
+                                        <button class="search-submit">
+                                            <i class="search-btn-icon fa fa-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--====================  End of header area  ====================-->
+
+    </div>

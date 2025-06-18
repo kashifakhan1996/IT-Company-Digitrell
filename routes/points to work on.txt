@@ -1,0 +1,14 @@
+points to work on
+1-fb ,insta page-done
+4-need to manage likes,comments,views-done
+8-News section
+9-Interview/video section
+10-ebooks,pdf,syllabus download section
+11-examination update,form link
+
+<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<%=fullUrl%>"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a target="_blank" href="https://plus.google.com/share?url=<%=fullUrl%>"><i class="fa fa-google-plus"></i></a></li>
+                                         <li><a target="_blank" href="https://in.pinterest.com/pin/create/button/?description=<%=fullUrl%>"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a target="_blank" href="https://twitter.com/intent/tweet?text=<%=fullUrl%>"><i class="fa fa-twitter"></i></a></li>
+
+12-contact section not working

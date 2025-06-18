@@ -1,0 +1,450 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/header-menu.ejs') %>
+<%
+const pricing_plans=[
+    {
+        "name":"Basic",
+        "price":"7999",
+        "features":[
+            {"feature":"Limited Edition"},
+            {"feature":"1 User Full Rights"},
+            {"feature":"( ₹ 2500/- per extra user )"},
+            {"feature":"( Maximum 2 users )"}
+        ],
+        "url":nodeSiteUrl+"/choose-plan/erp-solution?type=basic",
+        "price_per_month":799,
+        "icon":"mitech-pricing-box-icon-01-90x90.png"
+    },
+    {
+        "name":"Silver",
+        "price":"9999",
+        "features":[
+            {"feature":"Limited Edition"},
+            {"feature":"1 User Full Rights"},
+            {"feature":"( ₹ 2500/- per extra user )"},
+            {"feature":"( Maximum 2 users )"}
+        ],
+        "url":nodeSiteUrl+"/choose-plan/erp-solution?type=silver",
+        "price_per_month":999,
+        "icon":"mitech-pricing-box-icon-02-88x88.png"
+    },
+    {
+        "name":"Diamond",
+        "price":"22999",
+        "features":[    
+            {"feature":"Full Edition"},  
+            {"feature":"Unlimited User Full Rights"},
+            {"feature":"Available Support"}
+        ],
+        "url":nodeSiteUrl+"/choose-plan/erp-solution?type=gold",
+        "price_per_month":1999,
+        "icon":"mitech-pricing-box-icon-03-90x90.png"
+    }
+];
+%>
+    <div id="main-wrapper">
+        <div class="site-wrapper-reveal">
+            <div class="about-banner-wrap banner-space bg-img" data-bg="<%=nodeSiteUrl%>/website/images/bg/managed-it-services-hero-bg.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 ml-auto mr-auto">
+                            <div class="about-banner-content text-center">
+                                <h1 class="mb-15 text-white">Services Details</h1>
+                                <h5 class="font-weight--normal text-white">Reach out to the world’s most reliable IT services.</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--===========  feature-large-images-wrapper  Start =============-->
+            <div class="feature-large-images-wrapper section-space--ptb_100" style="display:none">
+                <div class="container">
+                    <div class="cybersecurity-about-box">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="modern-number-01">
+                                    <h3 class="heading mt-30">Learn More About Our <span class="text-color-primary"> Success <br> Stories</span></h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 offset-lg-1">
+                                <div class="conact-us-wrap-one managed-it">
+                                    <h5 class="heading ">Digitrell specializes in <span class="text-color-primary"> technological and IT-related services</span> such as product engineering, warranty management, building cloud, infrastructure, network, etc. </h5>
+
+                                    <div class="sub-heading">We’re available for 8 hours a day!<br>Contact to require a detailed analysis and assessment of your plan.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--===========  feature-large-images-wrapper  End =============-->
+
+            <div class="accordion-wrapper section-space--pb_100">
+                <div class="container">
+                    <div class="row ">
+                        <div class="col-lg-12 pr-5">
+                            <div class="faq-two-wrapper section-space--mt_40">
+                                <div id="accordion_two">
+                                    <div class="card">
+                                        <div class="card-header" id="heading__10">
+                                            <h5 class="mb-0 font-weight--bold">
+                                                <button class="btn-link" data-toggle="collapse" data-target="#tab__10" aria-expanded="true" aria-controls="tab__10">
+                                                    E-SCHOOLING <span>
+                                            <i class="far fa-caret-circle-down"></i>
+                                            <i class="far fa-caret-circle-right"></i> </span>
+                                                </button>
+                                            </h5>
+                                        </div>
+
+                                        <div id="tab__10" class="show" aria-labelledby="heading__10" data-parent="#accordion_two">
+                                            <div class="card-body">
+                                                <p>
+                                                   
+
+                                                    <b>An innovative Platform for Online Teaching to Address your Teaching Needs</b>
+                                                Digitrell Technologies offers end to end eLearning solutions for the Educational Institutions and Schools. As a premium website development company, we help you facilitate the learning and training of students through a dynamic, engaging and easy to use Learning Management System (LMS). Our comprehensive LMS helps you to host, upload, monitor, assess, and administer computer-based learning. As a leading eLearning solutions provider, we provide you with a powerful yet simple software for online teaching for the students – both in offline and online mode.
+                                                </p>
+                                                
+                                                
+                                                
+                                                
+                                                
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <!-- Start single-popup-wrap -->
+                            <div class="video-interview section-space--mt_40 video-popup">
+                                
+                                    <div class="single-popup-wrap">
+                                        <img class="img-fluid border-radus-5" src="<%=nodeSiteUrl%>/website/images/icons/mitech-box-image-style-06-image-01-120x120.jpg" alt="">
+                                        <div class="ht-popup-video video-button">
+                                            <div class="video-mark">
+                                                <div class="wave-pulse wave-pulse-1"></div>
+                                                <div class="wave-pulse wave-pulse-2"></div>
+                                            </div>
+                                            <div class="video-button__two">
+                                                <div class="video-play">
+                                                    <span class="video-play-icon"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                            </div>
+                            <!-- End single-popup-wrap -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--===========  feature-icon-wrapper  Start =============-->
+            <div class="feature-icon-wrapper section-space--pb_70">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title-wrap text-center section-space--mb_20">
+                                <h3 class="heading">Prominent IT Security Services</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="feature-list__three">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="grid-item animate">
+                                            <div class="ht-box-icon style-03">
+                                                <div class="icon-box-wrap">
+                                                    <div class="content-header">
+                                                        <div class="icon">
+                                                            <i class="fal fa-shield-check"></i>
+                                                        </div>
+                                                        <h5 class="heading">
+                                                            Mitech Management Systems
+                                                        </h5>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="text">Our service offerings enhance customer experience throughout secure & highly functional end-to-end warranty management.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="grid-item animate">
+                                            <div class="ht-box-icon style-03">
+                                                <div class="icon-box-wrap">
+                                                    <div class="content-header">
+                                                        <div class="icon">
+                                                            <i class="fal fa-lock-alt"></i>
+                                                        </div>
+                                                        <h5 class="heading">
+                                                            Reliable Multi-function Technology
+                                                        </h5>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="text">Develop and propose product improvements through periodical and accurate testing, repairing & refining every version.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="grid-item animate">
+                                            <div class="ht-box-icon style-03">
+                                                <div class="icon-box-wrap">
+                                                    <div class="content-header">
+                                                        <div class="icon">
+                                                            <i class="fal fa-magnet"></i>
+                                                        </div>
+                                                        <h5 class="heading">
+                                                            Highly Professional Staffs
+                                                        </h5>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="text">Develop and propose product improvements through periodical and accurate testing, repairing & refining every version.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="grid-item animate">
+                                            <div class="ht-box-icon style-03">
+                                                <div class="icon-box-wrap">
+                                                    <div class="content-header">
+                                                        <div class="icon">
+                                                            <i class="fal fa-medal"></i>
+                                                        </div>
+                                                        <h5 class="heading">
+                                                            Infrastructure Integration Technology
+                                                        </h5>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="text">At Mitech, we have a holistic and integrated approach towards core modernization to experience technological evolution.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--===========  feature-icon-wrapper  End =============-->
+
+
+            <!--========= Pricing Table Area Start ==========-->
+            <div class="pricing-table-area section-space--ptb_100 bg-gray">
+                <div class="pricing-table-title-area position-relative">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-title-wrapper text-center section-space--mb_40 wow move-up">
+                                    <h6 class="section-sub-title mb-20">Style 01</h6>
+                                    <h3 class="section-title">Affordable price plans<span class="text-color-primary"> for you!</span> </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-table-content-area">
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-12 text-center wow move-up">
+                                <ul class="nav justify-content-center ht-plans-menu  section-space--mb_60" role="tablist">
+                                    <li class="tab__item nav-item active">
+                                        <a class="nav-link active" data-toggle="tab" href="#month-tab" role="tab" aria-selected="true">Per month</a>
+                                    </li>
+                                    <li class="tab__item nav-item ">
+                                        <a class="nav-link" data-toggle="tab" href="#year-tab" role="tab" aria-selected="false">Per year</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="tab-content ht-tab__content wow move-up">
+                            <div class="tab-pane fade show active" id="month-tab" role="tabpanel">
+                                <div class="row pricing-table-one">
+                                    <% for(var i=0;i<pricing_plans.length;i++){%>
+                                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 pricing-table">
+                                            <div class="pricing-table__inner">
+                                                <div class="pricing-table__header">
+                                                    <h6 class="sub-title"><%=pricing_plans[i].name%></h6>
+                                                    <div class="pricing-table__image">
+                                                        <img src="<%=nodeSiteUrl%>/website/images/icons/<%=pricing_plans[i].icon%>" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="pricing-table__price-wrap">
+                                                        <h6 class="currency">Rs</h6>
+                                                        <h6 class="price"><%=pricing_plans[i].price_per_month%></h6>
+                                                        <h6 class="period">/Mo</h6>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="pricing-table__body">
+                                                    <div class="pricing-table__footer">
+                                                        <a href="<%=pricing_plans[i].url%>" class="ht-btn ht-btn-md ht-btn--outline">Get started</a>
+                                                    </div>
+                                                    <ul class="pricing-table__list text-left">
+                                                        <% var features = pricing_plans[i].features;
+                                                        for(var j=0;j< features.length;j++){%>
+                                                        
+                                                            <li><%=features[j].feature%></li>
+                                                        <%}%>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <%}%>
+                                    
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="year-tab" role="tabpanel">
+
+                                <div class="row pricing-table-one">
+                                    <% for(var i=0;i<pricing_plans.length;i++){%>
+                                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 pricing-table">
+                                            <div class="pricing-table__inner">
+                                                <div class="pricing-table__header">
+                                                    <h6 class="sub-title"><%=pricing_plans[i].name%></h6>
+                                                    <div class="pricing-table__image">
+                                                        <img src="<%=nodeSiteUrl%>/website/images/icons/<%=pricing_plans[i].icon%>" class="img-fluid" alt="">
+                                                    </div>
+                                                    <div class="pricing-table__price-wrap">
+                                                        <h6 class="currency">Rs</h6>
+                                                        <h6 class="price"><%=pricing_plans[i].price%></h6>
+                                                        
+                                                        <h6 class="period">/Year</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="pricing-table__body">
+                                                    <div class="pricing-table__footer">
+                                                        <a href="<%=pricing_plans[i].url%>" class="ht-btn ht-btn-md ht-btn--outline">Get started</a>
+                                                    </div>
+                                                    <ul class="pricing-table__list text-left">
+                                                        <% var features = pricing_plans[i].features;
+                                                        for(var j=0;j< features.length;j++){%>
+                                                        
+                                                            <li><%=features[j].feature%></li>
+                                                        <%}%>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <%}%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--========= Pricing Table Area End ==========-->
+
+
+
+
+
+
+
+
+
+
+            <!--========== Call to Action Area Start ============-->
+            <div class="cta-image-area_one section-space--ptb_80 cta-bg-image_one">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="cta-content md-text-center">
+                                <h3 class="heading text-white">We run all kinds of IT services that vow your <span class="text-color-secondary"> success</span></h3>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="cta-button-group--one text-center">
+                                <a href="#" class="btn btn--white btn-one"><span class="btn-icon mr-2"><i class="far fa-comment-alt-dots"></i></span> Let's talk</a>
+                                <a href="#" class="btn btn--secondary  btn-two"><span class="btn-icon mr-2"><i class="far fa-info-circle"></i></span> Get info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--========== Call to Action Area End ============-->
+
+        </div>
+
+        <!--====================  footer area ====================-->
+        <%- include('layouts/footer-menu.ejs') %>
+        <!--====================  End of footer area  ====================-->
+
+    </div>
+
+    <!-- Start Toolbar -->
+    <div class="demo-option-container">
+        <!-- Start Toolbar -->
+        <div class="aeroland__toolbar">
+            <div class="inner">
+                <a class="quick-option hint--bounce hint--left hint--black primary-color-hover-important" href="#" aria-label="Quick Options">
+                    <i class="fal fa-project-diagram"></i>
+                </a>
+                <a class="hint--bounce hint--left hint--black primary-color-hover-important" target="_blank" href="https://hasthemes.com/contact-us/" aria-label="Support Center">
+                    <i class="fal fa-life-ring"></i>
+                </a>
+                <a class="hint--bounce hint--left hint--black primary-color-hover-important" target="_blank" href="https://1.envato.market/c/417168/275988/4415?subId1=hastheme&amp;subId2=mitech-preview&amp;subId3=https%3A%2F%2Fthemeforest.net%2Fcart%2Fconfigure_before_adding%2F24906742%3Flicense%3Dregular%26size%3Dsource&amp;u=https%3A%2F%2Fthemeforest.net%2Fcart%2Fconfigure_before_adding%2F24906742%3Flicense%3Dregular%26size%3Dsource" aria-label="Purchase Mitech">
+                    <i class="fal fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+        <!-- End Toolbar -->
+        <!-- Start Quick Link -->
+        <div class="demo-option-wrapper">
+            <div class="demo-panel-header">
+                <div class="title">
+                    <h6 class="heading mt-30">IT Solutions Mitech - Technology, IT Solutions & Services Html5 Template</h6>
+                </div>
+
+                <div class="panel-btn mt-20">
+                    <a class="ht-btn ht-btn-md" href="https://1.envato.market/c/417168/275988/4415?subId1=hastheme&amp;subId2=mitech-preview&amp;subId3=https%3A%2F%2Fthemeforest.net%2Fcart%2Fconfigure_before_adding%2F24906742%3Flicense%3Dregular%26size%3Dsource&amp;u=https%3A%2F%2Fthemeforest.net%2Fcart%2Fconfigure_before_adding%2F24906742%3Flicense%3Dregular%26size%3Dsource"><i class="far fa-shopping-cart mr-2"></i> Buy Now </a>
+                </div>
+            </div>
+            <div class="demo-quick-option-list">
+                <a class="link hint--bounce hint--black hint--top hint--dark" href="index-appointment.html" aria-label="Appointment">
+                    <img class="img-fluid" src="<%=nodeSiteUrl%>/website/images/demo-images/home-01.jpg" alt="Images">
+                </a>
+                <a class="link hint--bounce hint--black hint--top hint--dark" href="index-infotechno.html" aria-label="Infotechno">
+                    <img class="img-fluid" src="<%=nodeSiteUrl%>/website/images/demo-images/home-02.jpg" alt="Images">
+                </a>
+                <a class="link hint--bounce hint--black hint--top hint--dark" href="index-processing.html" aria-label="Processing">
+                    <img class="img-fluid" src="<%=nodeSiteUrl%>/website/images/demo-images/home-03.jpg" alt="Images">
+                </a>
+                <a class="link hint--bounce hint--black hint--top hint--dark" href="index-services.html" aria-label="Services">
+                    <img class="img-fluid" src="<%=nodeSiteUrl%>/website/images/demo-images/home-04.jpg" alt="Images">
+                </a>
+                <a class="link hint--bounce hint--black hint--top hint--dark" href="index-resolutions.html" aria-label="Resolutions">
+                    <img class="img-fluid" src="<%=nodeSiteUrl%>/website/images/demo-images/home-05.jpg" alt="Images">
+                </a>
+                <a class="link hint--bounce hint--black hint--top hint--dark" href="index-cybersecurity.html" aria-label="Cybersecurity">
+                    <img class="img-fluid" src="<%=nodeSiteUrl%>/website/images/demo-images/home-06.jpg" alt="Images">
+                </a>
+            </div>
+        </div>
+        <!-- End Quick Link -->
+    </div>
+    <!-- End Toolbar -->
+    <%- include('layouts/footer.ejs') %>
+
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 const path = require('path');
  
 var express = require('express');
+var dotenv = require('dotenv').config()
 //var expressLayouts = require('express-ejs-layouts');
  
 //var app = express();
@@ -52,8 +53,6 @@ global.MILESTONE_PAYMENT_NOTIFICATION_TYPE = 3;
 global.REVIEW_NOTIFICATION_TYPE = 4;  
 global.siteTitle = 'Digitrell Technologies';
 
-var flash = require('express-flash-messages')
-app.use(flash())
 
 app.use(express.static('public'));
  

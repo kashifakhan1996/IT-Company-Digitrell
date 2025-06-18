@@ -13,7 +13,7 @@ const expressValidator = require('express-validator');
 const fileUpload = require('express-fileupload');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-  
+const Port = process.env.PORT  
 
 
 // Required module 
@@ -25,24 +25,16 @@ global.connectPool = require('./config/db.js');
  
 global.Mails = require('./controllers/MailsController');   // Mail function  
 
-
-// Constants 
-//global.nodeSiteUrl = 'http://192.168.1.151/constructionApp/nodeApi/'; // node  
-//var myIP='http://192.168.1.10';
 var myIP='http://localhost';
-global.nodeSiteUrl = myIP+':4000'; // node  
-global.nodeAdminUrl = myIP+':4000/admin'; // node  
-global.nodeMarketplaceFrontendUrl = myIP+':4000'; // node  marketplace backend
+global.nodeSiteUrl = myIP+':'+Port; // node  
+global.nodeAdminUrl = myIP+':'+Port+'/admin'; // node  
+global.nodeMarketplaceFrontendUrl = myIP+':'+Port; // node  marketplace backend
 
   
 global.siteUrl = myIP+':4000/constructionApp/code'; // 
 global.WebsiteURL = myIP+'/constructionApp/code/';  //       
 
 global.SITE_NAME = 'Digitrell Technologies'; //     
-global.noImageUsers = myIP+'/constructionApp/code/public/upload/avtar.png';  
-global.noImageConstructor = myIP+'/constructionApp/code/public/upload/No_Image_Available.png';   
-global.noImageConstructor = myIP+'/constructionApp/code/public/upload/No_Image_Available.png';   
-global.noImageProduct = myIP+':4000/images/No_Image_Available.png';  
 
 global.pageLimit = 10;   
 global.successStatus = 200;
@@ -50,9 +42,7 @@ global.failStatus = 401;
 global.SessionExpireStatus = 500; 
 global.CustomerRole = 1;  
 global.ConstructorRole = 2;  
-global.SITE_URL = 'localhost:4000/constructionApp/code/';  
 global.CURRENCY = '$';  
-global.FIREBASE_LEGACY_KEY = 'AIzaSyCODHZEPkjPGNy-X0jdLu1i9NVRFAaeumQ';  
 global.LOCATION_RANGE = 50; 
 
 // Notification type 
@@ -95,7 +85,7 @@ global.blogingEmail='bloginpoints@gmail.com';
 const nodemailer    = require("nodemailer"); 
 global.smtpTransport = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
-    port: 465,
+    port: process.env.SMTP_PORT,
     secure: true,
     auth: {
         user: process.env.SMTP_EMAIL,
@@ -119,18 +109,11 @@ global.servicesIndex=1;
 global.technologiesIndex=2;
 global.solutionsIndex=3;
 
-global.dbHost='localhost';
-global.dbUser='root';
-global.dbPassword='';
-global.dbName='construction_app_admin';
+global.dbHost=process.env.DBHOST
+global.dbUser=process.env.DBUSER
+global.dbPassword=process.env.DBPASSWORD
+global.dbName=process.env.DBNAME
 
-//live
-/*
-global.dbHost='103.212.121.75';
-global.dbUser='hdjxasfo_root';
-global.dbPassword='Workingwomen@123';
-global.dbName='hdjxasfo_construction_app_admin';
-*/
 
 global.fullUrl=null;
  
@@ -139,24 +122,9 @@ app.use('/', apiRouter);
 //added from example
  
  
-app.listen(4000, () => {
-    console.log('App listening on port 4000')
+app.listen(Port, () => {
+    console.log('App listening on http://localhost:'+Port)
 });
 process.on('uncaughtException', function (err) { 
     console.log('Caught exception: ' + err);
 });  
-
-// Check session of logged user 
-global.CheckPermission = function(req, res){  
-    if(typeof req.session.user !== "undefined"){
-        LoginUser = req.session.LoginUser; 
-        if(LoginUser){
-            return true; 
-        }else{ 
-            res.redirect(nodeAdminUrl+'/login'); 
-        }
-    }else{
-        return true; 
-    } 
-    return true;  
-}; 
